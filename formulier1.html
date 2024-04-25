@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactformulier</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        form {
+            background-color: #e4f1fa;
+            padding: 10px;
+        }
+
+        label {
+            display: inline-block;
+            padding-bottom: 20px;
+            width: 250px;
+            vertical-align: top;
+        }
+
+        input[type="submit"] {
+            background-color: #538296;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        input[type="tel"],
+        input[type="email"],
+        input[type="text"] {
+            border: none;
+            border-bottom: 2px solid #538296;
+            height: 20px;
+        }
+
+        textarea {
+            border: none;
+            border-bottom: 2px solid #538296;
+            margin-bottom: 20px;
+        }
+
+        select {
+            outline-color: #538296;
+            border: 2px solid #538296;
+            border-radius: 5px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="welkom.html" method="get">
+        <label for="aardvraag">Aard van uw vraag*</label>
+            <input type="radio" id="beroepsmatig" name="aardvraag" value="beroepsmatig">
+                <label for="beroepsmatig">Beroepsmatig</label>
+            <input type="radio" id="prive" name="aardvraag" value="prive" checked>
+                <label for="prive">Prive</label>
+        <br />
+        <label for="organisatie">Organisatie</label>
+            <input type="text" id="organisatie" name="organisatie"></input>
+        <br />
+        <label for="categorie">Categorie</label>
+            <select id="aardvraag" name="aardvraag" size="1">
+                <option selected value="geen">-Geen-</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="JS">Javascript</option>
+                <option value="php">PHP</option>
+                <option value="mysql">MySQL</option>
+                <option value="overig">Overig</option>
+            </select>
+        <br />
+        <label for="onderwerp">Onderwerp*</label>
+            <input type="text" id="onderwerp" name="onderwerp" required></input>
+        <br />
+        <label for="vraag">Vraag*</label>
+            <textarea rows="5" cols="30" required></textarea>
+        <br />
+        <label for="voornaam">Voornaam*</label> 
+            <input type="text" id="voornaam" name="voornaam" required></input>
+        <br />
+        <label for="achternaam">Achternaam*</label> 
+            <input type="text" id="achternaam" name="achternaam" required></input>
+        <br />
+        <label for="telefoonnummer">Telefoonnummer*</label> 
+            <input type="number" id="telefoonnummer" name="telefoonnummer" required></input>
+        <br />
+        <label for="emailadres">E-mailadres*</label> 
+            <input type="email" id="emailadres" name="emailadres" required></input>
+        <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief"></input>
+            <label for="nieuwsbrief">Ja, ik wil de nieuwsbrief ontvangen.</label>
+        <br />
+        <input type="submit" value="Contreleer uw gegevens"></input>
+    </form>
+</body>
+
+</html>

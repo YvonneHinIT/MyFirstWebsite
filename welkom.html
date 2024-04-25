@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welkomsbericht</title>
+
+    <script>
+        window.addEventListener("load", init);
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        function init() {
+            let allParameters = "";
+
+            urlParams.forEach((value, key) => {
+                allParameters += key + ": " + value + "<br>";
+            });
+            const voornaam = urlParams.get('voornaam')
+            const achternaam = urlParams.get('achternaam')
+
+            document.getElementById('naam').innerHTML = "Welkom " + voornaam + " " + achternaam;
+            document.getElementById('params').innerHTML = allParameters;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="naam"></h1>
+    <a href="index.html">Terug naar index.html</a>
+    <p id="params"></p>
+</body>
+
+</html>
